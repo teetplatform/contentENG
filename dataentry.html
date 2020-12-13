@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Engineering</title>
+    <link rel="stylesheet" href="./tex/bootstrap.min.css">
+    <script src="./dataentry.js"></script>
+    <link rel="stylesheet" href="./tex/tex.css">
+    <script defer src="./tex/tex.js"></script>
+    <script defer src="./tex/dtex.js"></script>
+    <script defer src="./tex/cetex.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row mt-3">
+            <div class="col"><textarea class="w-100 bg-dark text-light" rows="10" spellcheck="false"></textarea></div>
+        </div>
+        <div class="row">
+            <div class="col d-flex">
+                <div class="d-flex flex-column justify-content-center">
+                    <button id="QS" class="mb-1" onclick="updateProp('QS')">QS</button>
+                    <button id="QT" class="mb-1" onclick="updateProp('QT')">QT</button>
+                    <button id="QI" class="mb-1" onclick="updateProp('QI')">QI</button>
+                    <button id="HS" class="mb-1 mt-3" onclick="updateProp('HS')">HS</button>
+                    <button id="HT" class="mb-1" onclick="updateProp('HT')">HT</button>
+                    <button id="HI" onclick="updateProp('HI')">HI</button>
+                </div>
+                <div class="w-100">
+                    <div class="">
+                        <button id="AS" onclick="updateProp('AS')">AS</button>
+                        <button id="AT" onclick="updateProp('AT')">AT</button>
+                        <button id="AI" onclick="updateProp('AI')">AI</button>
+                        <button id="BS" class="ml-3" onclick="updateProp('BS')">BS</button>
+                        <button id="BT" onclick="updateProp('BT')">BT</button>
+                        <button id="BI" onclick="updateProp('BI')">BI</button>
+                        <button id="CS" class="ml-3" onclick="updateProp('CS')">CS</button>
+                        <button id="CT" onclick="updateProp('CT')">CT</button>
+                        <button id="CI" onclick="updateProp('CI')">CI</button>
+                        <button id="DS" class="ml-3" onclick="updateProp('DS')">DS</button>
+                        <button id="DT" onclick="updateProp('DT')">DT</button>
+                        <button id="DI" onclick="updateProp('DI')">DI</button>
+                    </div>
+                    <textarea id="content-input" class="w-100 bg-info text-light" id="" rows="10" spellcheck="false" oninput="updateCard(this)"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-6 pr-0">
+                <div class="card">
+                    <div class="card-header"></div>
+                    <div class="card-body"></div>
+                    <div class="card-footer"></div>
+                </div>
+                <button id="addnewbtn" class="btn btn-primary">New</button>
+                <button id="addnewbtn" class="btn btn-success ml-3" onclick="saveFileObj()">SAVE</button>
+            </div>
+            <div class="col-6">
+                <div id="btn-grid" class="bg-secondary w-100 overflow-auto" style="min-height: 40vh; height: 100%;"></div>
+            </div>
+        </div>
+        <hr>
+        <hr>
+        <div class="row mb-5">
+            <div class="col">
+                <div class="input-group mt-2">
+                    <div class="input-group-append">
+                        <button class="btn btn-secondary" type="button" onclick="createNewFile(this);">New
+                            File</button>
+                    </div>
+                    <input id="currentFileName" type="text" class="form-control" placeholder="File Code">
+                </div>
+                <button class="btn btn-secondary mt-2" onclick="downloadFile()">Download</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
